@@ -16,7 +16,7 @@ export default function ProductsData() {
         try {
             const productsData = await axios.get(`${Products_URL}/${endpoint}`);
             const myProducts = await productsData.data.products;
-            setProducts(myProducts.slice(0, 12));
+            setProducts(myProducts.slice(5, 17));
         } catch (err) {
             console.log(err.message);
         } finally {

@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { GoStarFill } from "react-icons/go";
+
 import { useNavigate, useParams } from "react-router-dom";
 
 export default function SingleProduct() {
@@ -29,15 +31,14 @@ export default function SingleProduct() {
     }, [id]);
 
     if (isLoading) {
-        return <h2>Loading...</h2>
+        return <h2 className="waiting">Loading...</h2>
     }
 
     if (!product) {
-        return <h2>Error: product not founded</h2>
+        return <h2 className="waiting">Error: product not founded</h2>
     }
 
     return (
-        product&& 
             <>
                 <div className="single_product_container">
                     <div className="product">
@@ -46,7 +47,10 @@ export default function SingleProduct() {
                         </div>
                         <div className="product_name">
                             <h2>{product.title}</h2>
-                            <h3>{product.rating}</h3>
+                            <div className="rating">
+                                <h3>{product.rating}</h3>
+                                <GoStarFill />
+                            </div>
                         </div>
                         <hr />
                         <div className="product_content">

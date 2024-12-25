@@ -32,8 +32,17 @@
             margin-inline: 1em;
             justify-content: space-between;
             align-items: center;
-            h3 {
-                color: #82c800;
+            .rating {
+                display: flex;
+                gap: 0.3em;
+                align-items: center;
+                font-size: 1.6em;
+                h3 {
+                    color: #bcb500;
+                }
+                svg {
+                    color: #bcb500;
+                }
             }
         }
     }
@@ -52,4 +61,11 @@
         outline: none;
         border-radius: 1.2em;
     }
+}
+
+.waiting {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
