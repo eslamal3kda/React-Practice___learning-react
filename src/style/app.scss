@@ -1,12 +1,10 @@
-@use "./data" ;
+@use "./global/reset" ;
+@use "./components/data" ;
 @use "./layout.scss";
-@use "./products.scss" ;
+@use "./components/products.scss" ;
+@use "./components/singleProduct.scss";
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+
 
 .container {
     display: flex;
@@ -102,4 +100,11 @@
             font-size: 1em;
         }
     }
+}
+
+.no_page {
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
 }

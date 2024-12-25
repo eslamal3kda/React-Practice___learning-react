@@ -1,9 +1,12 @@
-import Data from "../api/Data";
+import PostsData from "../api/PostsData";
+import ProductsData from "../api/ProductsData";
 
 export default function UseEffect() {
-  return (
-    <>
-        <Data />
-    </>
-  )
+    return (
+        <>
+            <PostsData />
+            <hr />
+            <ProductsData />
+        </>
+    );
 }
