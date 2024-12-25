@@ -1,0 +1,34 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: #EEE;
+    .logo {
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    ul {
+        list-style-type: none;
+        display: flex;
+        gap: 1em;
+        a{
+            color: #000;
+            opacity: 0.5;
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+footer {
+    height: 6em;
+    background-color: #272727;
+    color: #EEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+}
+

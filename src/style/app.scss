@@ -1,0 +1,105 @@
+@use "./data" ;
+@use "./layout.scss";
+@use "./products.scss" ;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em;
+    align-items: center;
+    .btn {
+        display: flex;
+        gap: 2em;
+        div {
+            padding: 1em;
+            width: 5em;
+            height: 3em;
+            border-radius: 1.3em;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &.increase {
+                background-color: #67ef67;
+            }
+            &.decrease{
+                background-color: #e03a3a;
+            }
+            &.reset {
+                background-color: #65b5d7;
+            }
+        }
+    }
+}
+
+//-----------------------------------------------------
+
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+
+    button {
+        padding: 1em;
+        width: 5em;
+        height: 3em;
+        border-radius: 1em;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        &.off {
+            background-color: #e03a3a;
+        }
+        &.on{
+            background-color: #67ef67;
+        }
+    }
+}
+
+//------------------------------------
+.background {
+    width: 20em;
+    height: 10em;
+    margin: 1em auto;
+    cursor: pointer;
+    background-color: #EEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+}
+
+.form-Container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 20em;
+    height: 10em;
+    margin: 1em auto;
+    font-size: 1.3em;
+    form {
+        background-color: #EEE;
+        width: 100%;
+        height: 100%;
+        padding: 1em;
+        input {
+            width: 90%;
+            padding: 0.6em;
+            background-color: #2d2d2d;
+            color: #FFF;
+            border: none;
+            outline: none;
+            border-radius: 1em;
+            font-size: 1em;
+        }
+    }
+}

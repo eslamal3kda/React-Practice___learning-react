@@ -1,0 +1,31 @@
+.data-container {
+    margin: 4em;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #EEE;
+    min-height: 80vh;
+    gap: 1em;
+    .post {
+        width: calc((100% - 2em) / 3);
+        border: 1px solid #2d2d2d;
+        padding: 0.5em;
+        position: relative;
+        .id {
+            background-color: #2d2d2d;
+            color: #EEE;
+            width: 1.6em;
+            height: 1.6em;
+            border-radius: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: -0.8em;
+            left: -0.8em;
+            cursor: pointer;
+        }
+        .title {
+            color: #01799a;
+        }
+    }
+}
