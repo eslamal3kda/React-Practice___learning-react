@@ -37,15 +37,30 @@
     }
 }
 
-.counter{
-    width: 5em;
-    height: 3em;
-    background-color: #000;
-    color: #FFF;
-    padding: 1em;
-    margin: 1em;
+
+.counter-container {
     display: flex;
-    justify-content: center;
+    gap: 2em;
     align-items: center;
-    border-radius: 2em;
+    .counter{
+        width: fit-content;
+        padding: 1em;
+        margin: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2em;
+    }
+    .interval-counter{
+        color: #FFF;
+        background-color: #000;
+    }
+    .context-counter{
+        background-color: #72c91b;
+    }
+    svg {
+        font-size: 2em;
+        color: #bc0505;
+        cursor: pointer;
+    }
 }

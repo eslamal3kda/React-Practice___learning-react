@@ -7,6 +7,34 @@ nav {
         text-transform: uppercase;
         cursor: pointer;
     }
+    .context-counter {
+        display: flex;
+        gap: 1em;
+        align-items: center;
+        .notify {
+            display: flex;
+            position: relative;
+            svg {
+                font-size: 2em;
+                color: #272727;
+                cursor: pointer;
+            }
+            .noti-count {
+                position: absolute;
+                top: -0.5em;
+                right: -0.5em;
+                background-color: #0076c4;
+                color: #fff;
+                padding: 0.5em;
+                width: 1.3em;
+                height: 1.3em;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
     ul {
         list-style-type: none;
         display: flex;
