@@ -55,12 +55,20 @@
         color: #FFF;
         background-color: #000;
     }
-    .context-counter{
-        background-color: #72c91b;
-    }
-    svg {
-        font-size: 2em;
-        color: #bc0505;
-        cursor: pointer;
+    .context-counter-container {
+        position: relative;
+        .context-counter{
+            padding-inline: 2em;
+            background-color: #72c91b;
+        }
+        svg {
+            font-size: 2em;
+            color: #bc0505;
+            cursor: pointer;
+            position: absolute;
+            right: 1em;
+            top: 50%;
+            transform: translate(0,-50%);
+        }
     }
 }

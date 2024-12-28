@@ -26,8 +26,10 @@ export default function UseEffect() {
         <>
             <div className="counter-container">
                 <h2 className="interval-counter counter">Interval Counter: {counter}</h2>
-                <h2 className="context-counter counter">Context Counter: {count}</h2>
-                <PiEmptyBold onClick={()=>setCount(0)} />
+                <div className="context-counter-container">
+                    <h2 className="context-counter counter">Context Counter: {count}</h2>
+                    <PiEmptyBold onClick={()=>setCount(0)} />
+                </div>
 
             </div>
             <hr />
