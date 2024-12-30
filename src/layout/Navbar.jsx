@@ -26,7 +26,7 @@ export default function Navbar() {
                 <li><NavLink to={''}>UseState</NavLink></li>
                 <li><NavLink to={'useEffect'}>UseEffect</NavLink></li>
                 <li><NavLink to={'useContext'}>UseContext</NavLink></li>
-                <li><NavLink to={'commingSoon'}>comming soon...</NavLink></li>
+                <li className="log-in"><NavLink className={"log-in"} to={'login'}>LogIn</NavLink></li>
             </ul>
         </nav>
         

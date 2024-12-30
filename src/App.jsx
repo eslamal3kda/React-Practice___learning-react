@@ -7,6 +7,7 @@ import SingleProduct from "./components/SingleProduct";
 import UseContext from "./pages/UseContext";
 import { CounterProvider } from "./context/counter";
 import { NotifyProvider } from "./context/notify";
+import Login from "./pages/Login";
 
 export default function App() {
     const Routing = createBrowserRouter([
@@ -19,6 +20,7 @@ export default function App() {
                 { path: "useEffect", element: <UseEffect /> },
                 { path: "useEffect/:id", element: <SingleProduct /> },
                 { path: "useContext", element: <UseContext /> },
+                { path: "login", element: <Login /> },
                 {path: "*",element: (<div className="no_page"><h1>Page Not Found Yet.</h1></div>),},
             ],
         },
