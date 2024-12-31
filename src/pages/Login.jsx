@@ -34,38 +34,16 @@ export default function Login() {
     return (
         <div className="login-form">
             <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
-                {(formik) => {
+                {() => {
                     return (
                         <>
                             {/* {console.log(formik)} */}
                             <Form>
-                                <WrapperInput name={"userName"} type={'text'} label={'Enter Your Username'} placeholder={'Enter Your Username'} />
-                                <WrapperInput name={"email"} type={'text'} label={'Enter Your E-Mail'} placeholder={'Enter Your E-Mail'} />
-                                <WrapperInput name={"password"} type={'password'} label={'Enter Your Password'} placeholder={'Enter Your Password'} />
-                                <WrapperInput name={"confirmPassword"} type={'password'} label={'Confirm Password'} placeholder={'Confirm Password'} />
-                                {/* <div className="input-container">
-                                    <label htmlFor="userName">Enter your username</label>
-                                    <Field type={"text"} id={"userName"} name={"userName"} placeholder={""} />
-                                    <ErrorMessage className="errorMessage" name="userName" component={"p"} />
-                                </div>
-                                <div className="input-container">
-                                    <label htmlFor="email">Enter your e-mail</label>
-                                    <Field type={"text"} id={"email"} name={"email"} placeholder={""} />
-                                    <ErrorMessage className="errorMessage" name="email" component={"p"} />
-                                </div>
-                                <div className="input-container">
-                                    <label htmlFor="password">enter your password</label>
-                                    <Field type={"text"} id={"password"} name={"password"} placeholder={""} />
-                                    <ErrorMessage className="errorMessage" name="password" component={"p"} />
-                                </div>
-                                <div className="input-container">
-                                    <label htmlFor="confirmPassword">confirm password</label>
-                                    <Field type={"text"} id={"confirmPassword"} name={"confirmPassword"} placeholder={""} />
-                                    <ErrorMessage className="errorMessage" name="confirmPassword" component={"p"} />
-                                </div> */}
-                                <button type="submit" className="login-btn">
-                                    log in
-                                </button>
+                                <WrapperInput name={"userName"} type={"text"} label={"Enter Your Username"} placeholder={"Enter Your Username"} />
+                                <WrapperInput name={"email"} type={"text"} label={"Enter Your E-Mail"} placeholder={"Enter Your E-Mail"} />
+                                <WrapperInput name={"password"} type={"password"} label={"Enter Your Password"} placeholder={"Enter Your Password"} />
+                                <WrapperInput name={"confirmPassword"} type={"password"} label={"Confirm Password"} placeholder={"Confirm Password"} />
+                                <button type="submit" className="login-btn"> log in</button>
                             </Form>
                         </>
                     );
