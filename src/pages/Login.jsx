@@ -1,6 +1,7 @@
-import { ErrorMessage, Field, Form, Formik } from "formik";
+import { Form, Formik } from "formik";
 import * as Yup from "yup";
 import WrapperInput from "../components/WrapperInput";
+import Swal from "sweetalert2";
 
 export default function Login() {
     const initialValues = {
@@ -10,7 +11,11 @@ export default function Login() {
         confirmPassword: "",
     };
     const onSubmit = (value) => {
-        console.log(value);
+        Swal.fire({
+            title: "Drag me!",
+            icon: "success",
+            draggable: true
+          });
     };
     const validationSchema = Yup.object({
         userName: Yup.string()
