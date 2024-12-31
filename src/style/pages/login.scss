@@ -1,4 +1,4 @@
-.login-form{
+.login-form {
     min-height: 80vh;
     display: flex;
     justify-content: center;
@@ -19,19 +19,48 @@
             flex-direction: column;
             width: 100%;
             gap: 0.5em;
+            position: relative;
             label {
                 margin-inline-start: 0.9em;
                 text-transform: capitalize;
                 color: #dad7cd;
             }
-            input {
-                padding: 1em;
-                border: none;
-                outline: none;
-                border-radius: 1.2em;
-                font-size: 1em;
-                background-color: #dad7cd;
-                color: #3a5a40;
+            .input-field{
+                // width: 100%;
+                position: relative;
+                input {
+                    width: calc((100% - 1em));
+                    padding: 1em;
+                    border: none;
+                    outline: none;
+                    border-radius: 1.2em;
+                    font-size: 1em;
+                    background-color: #dad7cd;
+                    color: #3a5a40;
+                }
+                .icon{
+                    position: absolute;
+                    right: 1em;
+                    top: 50%;
+                    translate: 0 -0.5em;
+                    color: #132a13;
+                    opacity: 0.6;
+                    cursor: pointer;
+                    &::before {
+                        content: "";
+                        width: 1px;
+                        height: 100%;
+                        left: -0.5em;
+                        background-color: #344e41;
+                        position: absolute;
+                        color: #132a13;
+                        translate: 0 -0.1em;
+                    }
+                }
+            }
+            .errorMessage {
+                text-transform: capitalize;
+                color: #132a13;
             }
         }
         button {
@@ -46,7 +75,7 @@
             font-size: 1em;
         }
     }
-    
+
     input {
         margin: 1em;
     }

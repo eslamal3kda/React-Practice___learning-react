@@ -1,5 +1,6 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
+import WrapperInput from "../components/WrapperInput";
 
 export default function Login() {
     const initialValues = {
@@ -12,7 +13,11 @@ export default function Login() {
         console.log(value);
     };
     const validationSchema = Yup.object({
-        userName: Yup.string().min(3, "Username must be at least 3 characters long").max(20, "Username must not exceed 20 characters").required("Username is required ").matches(/^[a-zA-Z0-9_]+$/, 'Username can only contain letters, numbers, and underscores'),
+        userName: Yup.string()
+            .min(3, "Username must be at least 3 characters long")
+            .max(20, "Username must not exceed 20 characters")
+            .required("Username is required ")
+            .matches(/^[a-zA-Z0-9_]+$/, "Username can only contain letters, numbers, and underscores"),
         email: Yup.string().email().required("Please enter a valid email address"),
         password: Yup.string()
             .required("password is required")
@@ -32,29 +37,32 @@ export default function Login() {
                 {(formik) => {
                     return (
                         <>
-                            {console.log(formik)}
-
+                            {/* {console.log(formik)} */}
                             <Form>
-                                <div className="input-container">
+                                <WrapperInput name={"userName"} type={'text'} label={'Enter Your Username'} placeholder={'Enter Your Username'} />
+                                <WrapperInput name={"email"} type={'text'} label={'Enter Your E-Mail'} placeholder={'Enter Your E-Mail'} />
+                                <WrapperInput name={"password"} type={'password'} label={'Enter Your Password'} placeholder={'Enter Your Password'} />
+                                <WrapperInput name={"confirmPassword"} type={'password'} label={'Confirm Password'} placeholder={'Confirm Password'} />
+                                {/* <div className="input-container">
                                     <label htmlFor="userName">Enter your username</label>
                                     <Field type={"text"} id={"userName"} name={"userName"} placeholder={""} />
-                                    <ErrorMessage name="userName" component={"p"} />
+                                    <ErrorMessage className="errorMessage" name="userName" component={"p"} />
                                 </div>
                                 <div className="input-container">
                                     <label htmlFor="email">Enter your e-mail</label>
                                     <Field type={"text"} id={"email"} name={"email"} placeholder={""} />
-                                    <ErrorMessage name="email" component={"p"} />
+                                    <ErrorMessage className="errorMessage" name="email" component={"p"} />
                                 </div>
                                 <div className="input-container">
                                     <label htmlFor="password">enter your password</label>
                                     <Field type={"text"} id={"password"} name={"password"} placeholder={""} />
-                                    <ErrorMessage name="password" component={"p"} />
+                                    <ErrorMessage className="errorMessage" name="password" component={"p"} />
                                 </div>
                                 <div className="input-container">
                                     <label htmlFor="confirmPassword">confirm password</label>
                                     <Field type={"text"} id={"confirmPassword"} name={"confirmPassword"} placeholder={""} />
-                                    <ErrorMessage name="confirmPassword" component={"p"} />
-                                </div>
+                                    <ErrorMessage className="errorMessage" name="confirmPassword" component={"p"} />
+                                </div> */}
                                 <button type="submit" className="login-btn">
                                     log in
                                 </button>
