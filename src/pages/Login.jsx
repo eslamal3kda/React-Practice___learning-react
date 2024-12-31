@@ -12,10 +12,12 @@ export default function Login() {
     };
     const onSubmit = (value) => {
         Swal.fire({
-            title: "Drag me!",
+            title: "Login Success!",
             icon: "success",
-            draggable: true
+            draggable: true,
           });
+          console.log(value);
+          
     };
     const validationSchema = Yup.object({
         userName: Yup.string()
