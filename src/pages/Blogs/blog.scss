@@ -1,0 +1,97 @@
+.blog_page {
+    min-height: 80vh;
+    .blogs_container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 95%;
+        margin: 2em auto;
+        padding: 1em;
+        gap: 1em; 
+        border:2px solid #2d2d2d2d;
+        .blog_card {
+            width: calc((100% - 2em) / 3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #2d2d2d2d;
+            padding: 1em;
+            border-radius: 1.5em;
+            gap: 1em;
+            .blog_header {
+                display: flex;
+                gap: 0.5em;
+                justify-content: space-between;
+                img {
+                    width: 5em;
+                    height: 5em;
+                    border-radius: 1.4em;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+.single_blog_page{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4em;
+    .single_blog_container {
+        display: flex;
+        padding: 1em;
+        width: 50em;
+        height: 15em;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1em;
+        border: 2px solid #2d2d2d2d;
+        .single_blog_image {
+            border-right: 1px solid #2d2d2dd2;
+            height: 100%;
+            width: 40%;
+            padding: 1em;
+            overflow: hidden;
+            img {
+                border-radius: 1.2em;
+                width: 100%;
+                height: 100%;
+                transition: 1s;
+                &:hover {
+                    border-radius: 0;
+                    scale: 1.2;
+                }
+            }
+        }
+        .single_blog_content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 1em;
+        }
+    }
+}
+
+
+@media(max-width:1000px){
+    .blog_page{
+        .blogs_container{
+            .blog_card {
+                width: calc((100% - 1em) / 2);
+            }
+        }
+    }
+}
+@media(max-width:690px){
+    .blog_page{
+        .blogs_container{
+            .blog_card {
+                width: 100%;
+            }
+        }
+    }
+}

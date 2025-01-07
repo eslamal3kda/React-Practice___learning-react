@@ -5,8 +5,11 @@
 @use "./components/singleProduct.scss";
 @use "./pages/useState.scss";
 @use "./pages/login.scss";
+@use "./pages/todo.scss";
 
-
+.loading {
+    font-size: 3em;
+}
 
 .no_page {
     display: flex;
