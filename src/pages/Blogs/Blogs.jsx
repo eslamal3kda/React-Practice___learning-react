@@ -4,11 +4,14 @@ import { useQuery } from "@tanstack/react-query";
 import { GetServerRequest } from "../../axios/GetServerRequest";
 
 export default function Blogs() {
+    
     const { data, isLoading, isError } = useQuery({
         queryKey: ["blogs"],
         queryFn: () => GetServerRequest("/blogs"),
         refetchOnWindowFocus: false,
     });
+
+    
 
     if (isLoading)
         return (

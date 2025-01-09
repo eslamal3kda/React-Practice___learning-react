@@ -6,6 +6,7 @@
     .todo_card {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         padding: 1em;
         gap: 2em;
         // background-color: #EEE;
@@ -17,4 +18,38 @@
             border: 2px solid #c01d1d;
         }
     }
+}
+
+form {
+    display: flex;
+    width: 50% ;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    margin: 1em auto;
+    border: 1px solid #2d2d2d2d;
+    border-radius: 1em;
+    input, select {
+        padding: 1em;
+        width: 100;
+        border-radius: 1em;
+    }
+    .comp {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+    button {
+        padding: 1em;
+        border-radius: 1em;
+    }
+}
+
+.deleteTodo {
+    padding: 1em;
+    border-radius: 1em;
+}
+.todoErrorMessage {
+    color: #c01d1d;
+    text-transform: capitalize;
 }
