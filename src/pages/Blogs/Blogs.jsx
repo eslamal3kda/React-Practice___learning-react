@@ -79,7 +79,7 @@ export default function Blogs() {
                 }}
             </Formik>
             <div className="blogs_container">
-                {data.data.map((blog) => (
+                {data.data.length == 0? <h2>No Blogs</h2> :data.data.map((blog) => (
                     <BlogCard key={blog.id} title={blog.title} description={blog.description} image={blog.image} url={blog.slug ? blog.slug : blog.id} deleteBlog={deleteBlog} />
                 ))}
             </div>
