@@ -76,6 +76,54 @@
     }
 }
 
+.blog-form {
+    display: flex;
+    width: 50% ;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    margin: 1em auto;
+    border: 1px solid #2d2d2d2d;
+    border-radius: 1em;
+    input, select {
+        padding: 1em;
+        width: 100;
+        border-radius: 1em;
+    }
+    .comp {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+    button {
+        padding: 1em;
+        border-radius: 1em;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        background-color: #002566c6;
+        color: #FFF;
+    }
+}
+
+.delete-blog {
+    padding: 1em;
+    border-radius: 1em;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    background-color: #b10000c6;
+    color: #FFF;
+    width: fit-content;
+    border: none;
+    outline: none;
+}
+
+.blogErrorMessage {
+    color: #c01d1d;
+    text-transform: capitalize;
+}
+
 
 @media(max-width:1000px){
     .blog_page{

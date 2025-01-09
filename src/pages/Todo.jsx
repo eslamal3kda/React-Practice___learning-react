@@ -48,11 +48,11 @@ export default function Todo() {
 
     return (
         <>
-            <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
+            <Formik  initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
                 {(e) => {
                     console.log(e);
                     return (
-                        <Form>
+                        <Form className="todo-form">
                             <Field name="title" placeholder="Enter The Title" />
                             <ErrorMessage className="todoErrorMessage" name="title" component={'p'}/>
                             <Field as="select" name="priority" placeholder="Enter The priority">
