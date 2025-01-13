@@ -30,6 +30,8 @@ export default function Todo() {
 
     if (isLoading) return <h2>Loading...</h2>;
     if (isError) return <h2>Something Error</h2>;
+
+    
     const initialValues = {
         title: "",
         priority: "",
@@ -38,7 +40,6 @@ export default function Todo() {
     };
     const onSubmit = (values) => {
         todoMutate(values);
-        console.log(values);
     };
     const validationSchema = Yup.object({
         title: Yup.string().required("this field is requered"),

@@ -3,6 +3,7 @@ import PostsData from "../components/PostsData";
 import ProductsData from "../components/ProductsData";
 import { CounterContext } from "../context/counter";
 import { PiEmptyBold } from "react-icons/pi";
+import Pagination from "../components/Pagination";
 
 export default function UseEffect() {
     let [counter,setCounter] = useState(0)
@@ -36,6 +37,8 @@ export default function UseEffect() {
             <PostsData />
             <hr />
             <ProductsData />
+            <hr />
+            <Pagination />
         </>
     );
 }

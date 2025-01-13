@@ -1,0 +1,30 @@
+.pagination-products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 1em;
+    margin: 1em;
+    .pagination-products-card {
+        width: calc((100% - 2em) / 3);
+        border: 1px solid #2d2d2d2d;
+        padding: 0.5em;
+    }
+}
+
+.pagination-buttons {
+    display: flex;
+    gap: 2em;
+    width: 50%;
+    margin: 1em auto;
+    padding: 1em;
+    justify-content: space-between;
+    align-items: center;
+    button {
+        padding: 1em 3em;
+        border-radius: 1em;
+        background-color: #d2d2d22d;
+        cursor: pointer;
+        border: 1px solid #2d2d2d;
+        outline: none;
+    }
+}

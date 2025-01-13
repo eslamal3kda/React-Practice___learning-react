@@ -8,6 +8,7 @@ const AxiosConfig = axios.create({
         Accept: "application/json",
         "Content-Type": "application/json",
     },
+    
 });
 
 export { AxiosConfig, BASE_URL };

@@ -6,6 +6,7 @@
 @use "./pages/useState.scss";
 @use "./pages/login.scss";
 @use "./pages/todo.scss";
+@use "./components/pagination.scss";
 
 .loading {
     font-size: 3em;
